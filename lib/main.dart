@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:made_soft_logic/screens/Homepage.dart';
-import 'package:made_soft_logic/screens/home.dart';
+
 import 'package:made_soft_logic/screens/page.dart';
 import 'package:made_soft_logic/screens/register.dart';
 import 'package:made_soft_logic/utils/colors.dart';
@@ -34,9 +33,9 @@ class MyApp extends StatelessWidget {
 
 
 
-      title: 'Live Your Dream',
+      title: 'MadeSoftLogic',
       theme: ThemeData(
-          fontFamily: "BASISGROTESQUEPRO"
+
       ),
       home: Register(),
     );

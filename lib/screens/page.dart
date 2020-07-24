@@ -280,6 +280,7 @@ AppState appState;
                         crossAxisCount: 2,
                         mainAxisSpacing: 10,
                         crossAxisSpacing: 10,
+                        childAspectRatio: 0.99
                       ),
                       itemBuilder: (cxt, index) {
                         return Elevated(

@@ -4,7 +4,8 @@ import 'package:flutter_svg/svg.dart';
 
 import 'package:made_soft_logic/constants/constants.dart';
 import 'package:made_soft_logic/model/customPopupMenu.dart';
-import 'package:made_soft_logic/screens/Homepage.dart';
+
+import 'package:made_soft_logic/screens/page.dart';
 import 'package:made_soft_logic/utils/colors.dart';
 
 
@@ -511,7 +512,7 @@ SizedBox(height: 20,),
 //
 //                    }
 
-//                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Homepage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
                   },
                   child: Center(
                     child: Container(
