@@ -12,13 +12,11 @@ Elevated({this.text, this.number, this.image});
   @override
   Widget build(BuildContext context) {
 
-    return     Container(
-      width: 165,
-      height: 130,
-      child: Material(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.white,
-        elevation: 1.0,
+    return     Card(
+      elevation: 0.0,
+      child: Container(
+        width: 165,
+        height: 130,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -26,23 +24,21 @@ Elevated({this.text, this.number, this.image});
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image.asset(image),
-                SizedBox(width: 5,),
+                SizedBox(width: 10,),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20),
-                  child: Text(number, style: TextStyle(fontSize: 20),),
+                  child: Text(number, style: TextStyle(fontSize: 20, color: Color(0xff6619EA)),),
                 ),
 
               ],
             ),
 
-SizedBox(height: 10,),
-            Center(child: Text(text))
+SizedBox(height: 20,),
+            Center(child: Text(text, style: TextStyle(fontSize: 20),))
           ],
         ),
 
-
       ),
-
     );
   }
 }

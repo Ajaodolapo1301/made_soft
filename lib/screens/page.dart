@@ -3,6 +3,7 @@ import 'package:made_soft_logic/model/customPopupMenu.dart';
 import 'package:made_soft_logic/reusables/elevated.dart';
 import 'package:made_soft_logic/utils/colors.dart';
 import 'package:made_soft_logic/view_model/appState.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:provider/provider.dart';
 
 
@@ -191,24 +192,25 @@ AppState appState;
                               child: Row(
                                 children: <Widget>[
                                   Container(
-                                    width: 180,
-                                    height: 19,
-                                    decoration: BoxDecoration(
-                                        color: AppColors.primary,
-                                        borderRadius:
-                                        BorderRadius.circular(4)),
-                                  ),
-                                  Container(
-                                    width: 59,
-                                    height: 19,
-                                    decoration: BoxDecoration(
-                                        color: AppColors.bar,
-                                        borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(5),
-                                            topRight: Radius.circular(5))),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
+                                    decoration:BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10)
+                              ),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 10),
+                                      child:  LinearPercentIndicator(
+                                        width: 250.0,
+
+                                        backgroundColor: AppColors.primary.withOpacity(0.2),
+                                        animation: true,
+                                        animationDuration: 1000,
+                                        lineHeight: 20.0,
+
+                                        percent: 0.7,
+
+                                        linearStrokeCap: LinearStrokeCap.butt,
+                                        progressColor: AppColors.primary,
+                                      ),
+                                    ),
                                   ),
                                   Column(
                                     children: <Widget>[
@@ -231,24 +233,25 @@ AppState appState;
                               child: Row(
                                 children: <Widget>[
                                   Container(
-                                    width: 120,
-                                    height: 19,
-                                    decoration: BoxDecoration(
-                                        color: AppColors.primary,
-                                        borderRadius:
-                                        BorderRadius.circular(4)),
-                                  ),
-                                  Container(
-                                    width: 89,
-                                    height: 19,
-                                    decoration: BoxDecoration(
-                                        color: AppColors.bar,
-                                        borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(5),
-                                            topRight: Radius.circular(5))),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
+                                    decoration:BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10)
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.only(left: 10),
+                                      child:  LinearPercentIndicator(
+                                        width: 200.0,
+
+                                        backgroundColor: AppColors.primary.withOpacity(0.2),
+                                        animation: true,
+                                        animationDuration: 1000,
+                                        lineHeight: 20.0,
+
+                                        percent: 0.3,
+
+                                        linearStrokeCap: LinearStrokeCap.butt,
+                                        progressColor: AppColors.primary,
+                                      ),
+                                    ),
                                   ),
                                   Column(
                                     children: <Widget>[
@@ -262,7 +265,9 @@ AppState appState;
                                   )
                                 ],
                               ),
-                            )
+                            ),
+
+
                           ],
                         ),
                       ),
